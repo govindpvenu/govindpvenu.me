@@ -5,7 +5,6 @@ export const MAIN_NAV: NavItem[] = [
     title: "Gofolio",
     href: "/",
   },
-  // Blog and Components removed
 ];
 
 export const GITHUB_USERNAME = "govindpvenu";

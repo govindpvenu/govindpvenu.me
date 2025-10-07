@@ -1,5 +1,4 @@
 import { FlatCompat } from "@eslint/eslintrc";
-// import boundaries from "eslint-plugin-boundaries";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
