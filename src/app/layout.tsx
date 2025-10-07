@@ -2,15 +2,14 @@ import "@/styles/globals.css";
 
 import dynamic from "next/dynamic";
 
+import { Providers } from "@/components/providers";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { fontMono, fontSans } from "@/lib/fonts";
 
 const ScrollTop = dynamic(() =>
   import("@/components/scroll-top").then((mod) => mod.ScrollTop)
 );
-
-import { Providers } from "@/components/providers";
-import { fontMono, fontSans } from "@/lib/fonts";
 
 export default function RootLayout({
   children,

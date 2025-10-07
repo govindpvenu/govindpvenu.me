@@ -75,7 +75,6 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 const TECH_STACK_KEYS = TECH_STACK.map((tech) => tech.key);
 
 export function TechStack() {
-  console.count("rerender");
   const [data, setData] = useState<IconData | null>(null);
   const { theme } = useTheme();
 
