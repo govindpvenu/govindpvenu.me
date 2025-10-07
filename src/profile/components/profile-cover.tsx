@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export function ProfileCover() {
   const { resolvedTheme } = useTheme();
-  const isLight = resolvedTheme === "light";
+  const isDark = resolvedTheme === "dark";
 
   return (
     <div
@@ -18,9 +18,9 @@ export function ProfileCover() {
         "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
       )}
     >
-      {isLight ? (
+      {isDark ? (
         <Image
-          src={"/go-light.png"}
+          src={"/go-dark.png"}
           alt="Go"
           className="h-32 w-48 sm:h-48 sm:w-64"
           width={1536}
@@ -31,7 +31,7 @@ export function ProfileCover() {
         />
       ) : (
         <Image
-          src={"/go-dark.png"}
+          src={"/go-light.png"}
           alt="Go"
           className="h-32 w-48 sm:h-48 sm:w-64"
           width={1536}
