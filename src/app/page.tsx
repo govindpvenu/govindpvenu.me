@@ -3,6 +3,7 @@ import { About } from "@/profile/components/about";
 import { Certifications } from "@/profile/components/certifications";
 import { Experiences } from "@/profile/components/experiences";
 import { GitHubContributions } from "@/profile/components/github-contributions";
+import { LeetcodeStats } from "@/profile/components/leetcode-stats";
 import { Overview } from "@/profile/components/overview";
 import { ProfileCover } from "@/profile/components/profile-cover";
 import { ProfileHeader } from "@/profile/components/profile-header";
@@ -31,6 +32,9 @@ export default function Page() {
         <Separator />
 
         <TechStack />
+        <Separator />
+
+        <LeetcodeStats />
         <Separator />
 
         <Experiences />
