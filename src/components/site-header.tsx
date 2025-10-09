@@ -9,9 +9,10 @@ import { cn } from "@/lib/utils";
 import { SiteHeaderMark } from "./site-header-mark";
 import { SiteHeaderWrapper } from "./site-header-wrapper";
 import { ToggleTheme } from "./toggle-theme";
+import { LinkPreview } from "./ui/link-preview";
 
 const MobileNav = dynamic(() =>
-  import("@/components/mobile-nav").then((mod) => mod.MobileNav),
+  import("@/components/mobile-nav").then((mod) => mod.MobileNav)
 );
 
 export function SiteHeader() {
@@ -21,7 +22,7 @@ export function SiteHeader() {
         "sticky top-0 z-50 max-w-screen overflow-x-hidden bg-background px-2 pt-2",
         "data-[affix=true]:shadow-[0_0_16px_0_black]/8 dark:data-[affix=true]:shadow-[0_0_16px_0_black]/80",
         "not-dark:data-[affix=true]:**:data-header-container:after:bg-border",
-        "transition-shadow duration-300",
+        "transition-shadow duration-300"
       )}
     >
       <div
@@ -37,6 +38,9 @@ export function SiteHeader() {
         <DesktopNav items={MAIN_NAV} />
 
         <div className="flex items-center gap-2">
+          <LinkPreview url="https://rxresu.me/govindpvenu/resume">
+            Resume
+          </LinkPreview>
           <NavItemGitHub />
           <ToggleTheme />
           <MobileNav className="sm:hidden" items={MAIN_NAV} />

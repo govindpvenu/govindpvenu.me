@@ -1,14 +1,7 @@
-"use client";
-
-import Image from "next/image";
-import { useTheme } from "next-themes";
-
+import Shuffle from "@/components/Shuffle";
 import { cn } from "@/lib/utils";
 
 export function ProfileCover() {
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
-
   return (
     <div
       className={cn(
@@ -18,29 +11,18 @@ export function ProfileCover() {
         "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
       )}
     >
-      {isDark ? (
-        <Image
-          src={"/go-dark.png"}
-          alt="Go"
-          className="h-32 w-48 sm:h-48 sm:w-64"
-          width={1536}
-          height={1024}
-          loading="eager"
-          priority
-          fetchPriority="high"
-        />
-      ) : (
-        <Image
-          src={"/go-light.png"}
-          alt="Go"
-          className="h-32 w-48 sm:h-48 sm:w-64"
-          width={1536}
-          height={1024}
-          loading="eager"
-          priority
-          fetchPriority="high"
-        />
-      )}
+      <Shuffle
+        key={1}
+        text="Govind"
+        ease="power2.out"
+        duration={1.5}
+        shuffleTimes={1}
+        stagger={0.2}
+        shuffleDirection="right"
+        loop={false}
+        loopDelay={0}
+        triggerOnHover={true}
+      />
     </div>
   );
 }
