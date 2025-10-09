@@ -1,14 +1,13 @@
 "use client";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-
-import { encode } from "qss";
-import React from "react";
 import {
   AnimatePresence,
   motion,
   useMotionValue,
   useSpring,
 } from "motion/react";
+import { encode } from "qss";
+import React from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -31,8 +30,6 @@ export const LinkPreview = ({
   className,
   width = 200,
   height = 125,
-  quality = 50,
-  layout = "fixed",
   isStatic = false,
   imageSrc = "",
 }: LinkPreviewProps) => {
@@ -78,12 +75,7 @@ export const LinkPreview = ({
     <>
       {isMounted ? (
         <div className="hidden">
-          <img
-            src={src}
-            width={width}
-            height={height}
-            alt="hidden image"
-          />
+          <img src={src} width={width} height={height} alt="hidden image" />
         </div>
       ) : null}
 
